@@ -44,7 +44,19 @@ public class Main {
         System.out.print(number[0] + "," + number[1]);
         System.out.println();
 
+        //task4
 
+        weights[0] = 1;
+        weights[1] = 2;
+        weights[2] = 3;
+        for (int i = 0; i < weights.length; i++) {
+            if (weights [i] % 2 == 0) {
+                System.out.println(weights[i] + ",");
+            }else if (weights [i] % 2 != 0) {
+                System.out.print(++weights[i] +",");
+            }
+
+        }
     }
 
 }
