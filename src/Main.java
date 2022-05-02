@@ -18,7 +18,11 @@ public class Main {
         weight[1] = 7.654f;
         weight[2] = 9.986f;
         for (int i = 0; i < weight.length; i++) {
+            if (weight [i] <= weight.length)
             System.out.print(weight[i] + ",");
+            else {
+                System.out.print("," +weight[i]);
+            }
         }
         System.out.println();
         long[] number = new long[2];
