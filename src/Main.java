@@ -2,68 +2,53 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         System.out.println();
-//task 1,2
-        int[] weights = new int[3];
-        weights[0] = 1;
-        weights[1] = 2;
-        weights[2] = 3;
-        for (int i = 0; i < 3; i++) {
-            System.out.print(weights[i] + ",");
 
-        }
-
-        System.out.println();
-        float[] weight = {1.57f, 7.654f, 9.986f};
-        weight[0] = 1.57f;
-        weight[1] = 7.654f;
-        weight[2] = 9.986f;
-        for (int i = 0; i < weight.length; i++) {
-            if (weight [i] <= weight.length)
-            System.out.print(weight[i] + ",");
-            else {
-                System.out.print("," +weight[i]);
-            }
-        }
-        System.out.println();
-        long[] number = new long[2];
-        number[0] = 1;
-        number[1] = 2;
-        for (int i = 0; i < 2; i++) {
-            System.out.print(number[i] + ",");
-        }
-
-        System.out.println();
-
-        //task 3
-        for (int i = weights.length-1;i >=0; i--) {
-        System.out.print(weights[i] + ",");
-        }
-
-        System.out.println();
-
-        for (int i = weight.length - 1; i>=0;i--) {
-        System.out.print(weight[i] + ",");
-        }
-        System.out.println();
-
-        for (int i = number.length - 1; i >=0; i--) {
-        System.out.print(number[i] + ",");
-        }
-        System.out.println();
-
-        //task4
-
-
+        int [] weights = {90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
+        int [] weightsCopy = {90, 91, 93, 92, 85, 87, 88, 89, 0, 0, 0, 0};
+        int januaryWeight = weights[0];
+        System.out.println(januaryWeight);
+        System.out.println(weights[0]);
+        System.out.println(weights[4]);
+        int january = 0;
+        System.out.println(weights[january]);
         for (int i = 0; i < weights.length; i++) {
-            if (weights [i] % 2 == 0) {
-                System.out.println(weights[i] + ",");
-            }else if (weights [i] % 2 != 0) {
-                System.out.print(++weights[i] +",");
+            System.out.println(weights[i]);
+
+        }
+        boolean arraysAreEqual = true;
+        arraysAreEqual = weights.length == weightsCopy.length;
+        if (arraysAreEqual) {
+            for (int i = 0; i < weights.length; i++) {
+                if (weights[i] != weightsCopy[i]) {
+                    arraysAreEqual = false;
+                }
+            }
+        }
+        if (arraysAreEqual) {
+            System.out.println("arrays are the same");
+        } else {
+            System.out.println("arrays are not the same");
+        }
+        for (int i = 0; i < weightsCopy.length; i++) {
+            System.out.println(weightsCopy[i]);
+        }
+        int maxWeight = -1;
+        for (final int current : weights) {
+            if (current > maxWeight) {
+                maxWeight = current;
             }
 
         }
+        System.out.println(maxWeight);
+        for (int i = 0; i < weights.length-1 && weights[i+1]!=0; i++) {
+            System.out.println(weights[i+1]-weights[i]);
         }
-
     }
+}
+
+
+
+
+
 
 
